@@ -1,0 +1,2 @@
+### 7a. Interpret Vault identity entities and groups
+[Link to Identity Secrets engine notes](../1-Create-a-working-Vault-server-configuration-given-a-scenario/1a-Enable-and-configure-secret-engines.md###Identity)
