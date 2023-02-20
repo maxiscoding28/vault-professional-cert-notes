@@ -15,4 +15,3 @@
 - Container Supervisor
   - Don't run as root. Process might escape container also have root in node
   - SecurityContext, PodSecuritContext runAsNonRoot
-  - Dont run Vault as Root
