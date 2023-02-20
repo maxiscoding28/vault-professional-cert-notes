@@ -11,7 +11,7 @@ vault write -f sys/replication/performance/primary/enable
 
 # Generate secondary token
 vault write -f sys/replication/performance/primary/secondary-token \
-  > id=pr-secondary
+  id=pr-secondary
 ```
 - On secondary
 ```
