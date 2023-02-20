@@ -20,7 +20,7 @@ http://127.0.0.1:8200/v1/kv/max
 # KV version=2
 http://127.0.0.1:8200/v1/kv2/data/max
 ```
-- KV get and put (uses different paths under the hood for CLI)
+- KV get and put (uses different url paths under the hood for CLI)
 ```
 vault kv get kv1/max
 vault kv get kv2/max
@@ -50,7 +50,7 @@ vault kv enable-versioning path
 ```
 ---
 ### Database
-- Configure a DB Connection (Command will fail if Vault can't connect to DB)
+- Enable Database secrets engine and configure a DB Connection (Command will fail if Vault can't connect to DB)
 ```
 vault secrets enable database
 
@@ -168,7 +168,7 @@ vault write identity/entity name=max-winslow policies=entity-policy
 vault write identity/entity-alias name=max1 canonical_id=$ENTITY_ID mount_accessor=$MOUNT_ACCESSOR1
 vault write identity/entity-alias name=max2 canonical_id=$ENTITY_ID mount_accessor=$MOUNT_ACCESSOR2
 ```
-- Login, `upass1/2-alias-policy` policies should be different but both logins should have `entity policy`
+- Login, `upass(1/2)-alias-policy` policies should be different but both logins should have `entity policy`
 ```
 vault login -path=upass1 -method=userpass -no-store=true username=max1 password=1234
 vault login -path=upass2 -method=userpass -no-store=true username=max2 password=1234
@@ -199,7 +199,7 @@ vault write identity/group name=external-group policies=external-group-policy ty
 ```
 vault write identity/group-alias name=$GITHUB_TEAM_NAME mount_accessor=$MOUNT_ACCESSOR canonical_id=GROUP_ID
 ```
-- Login(need a Github token), confirm that external group policy is associated with token
+- Login (need a Github token), confirm that external group policy is associated with token
 ```
 vault login -method=github
 ```
