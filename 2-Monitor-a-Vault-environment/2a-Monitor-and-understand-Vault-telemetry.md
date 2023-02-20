@@ -1,5 +1,5 @@
 ## 2a. Monitor and understand Vault telemetry
-**Monitor and Understand == likely expected to discuss these concepts but not expected to configure (in a lab enviroment)**
+**"Monitor and Understand" means you are likely expected to discuss these concepts but not expected to configure (in a lab enviroment)**
 **Possibly configure audit logs, create telemetry stanza (with provided parameters)**
   - Providers: statsite, stasd, circonus, dogstatsd, prometheus, stackdriver
   - e.g vault.core.handle_request, mem.used_percent
