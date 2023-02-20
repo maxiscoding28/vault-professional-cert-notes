@@ -3,14 +3,14 @@
 - Standby does not provide read or write functionality
 - If standby receives request, it forwards request to active (or redirects)
 ### Enterprise
-- Standby node can response to read requests
+- Standby node can respond to read requests
 - Write requests get forwarded to the active node
-- Called "performance" standby.
+- Called a "performance" standby.
+- Enabled by default, can be disabled with `disable_performance_standby=true` in config.
 ### Eventual Consistency
 - Active node writes data
 - Data propagates out to standby
 - Read after write can return old data or not return data
-- Enabled by default, can be disabled with `disable_performance_standby=true` in config.
 ### Target performance standby
 - `/sys/health` endpoint
 - Load balancers can target specific return codes to determine active vs performance standby
