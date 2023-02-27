@@ -1,4 +1,12 @@
 ## 1d. Implement integrated storage for open source and enterprise vault
+### Introduction
+- All nodes in cluster have replicated copy of Vault's data
+- Integrated Storate all data on local disc. High IOPS volume wherever you are storing the data
+- Features:
+    - Replication to DR/PR for Vault enterprise
+    - Auto snapshots
+    - Autojoin based on cloud
+    - Autopilot, auto-manager vault clusters
 ### Cluster Management
 - Manually join a node to a cluster
 ```
