@@ -17,9 +17,9 @@ gpg --export maxypoo | base64 > pgp.asc
 ```
 vault operator init -recovery-shares=1 -recovery-threshold=1 -recovery-pgp-keys=pgp.asc
 ```
-  - decrypt `echo $PGP_KEY | base64 --decode | gpg -dq
+  - decrypt:
 ```
-
+echo $PGP_KEY | base64 --decode | gpg -dq
 ```
 - Unseal
 - Configure
